@@ -1,0 +1,59 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  block-size: fit-content  ;
+  height:100vh;
+  width:50%;
+  border: 2px dashed gray;
+  float: left;
+ overflow: hidden;
+}
+#container1{
+  background-color: rgb(89, 97, 72);
+}
+#container2{
+  background-color: rgb(103, 125, 57);
+}
+
+.item {
+  position: relative;
+  transform: translate(-50%,50%);
+  border: 1px solid;
+  background-color: rgb(219, 225, 227);
+  width: 10%;
+  height: 25%;
+  cursor: grab;
+  overflow: hidden;
+}
+.item:after {
+  content: "";
+  display: block;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.reset-button {  
+  margin-bottom: 10px;
+  margin-top: 10px;
+  height: 50%;
+  width: 50%;
+  background-color: blue;
+  color: white;
+}
+.btn{
+  text-align: center;
+  height: 10vh;
+  width: auto;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
